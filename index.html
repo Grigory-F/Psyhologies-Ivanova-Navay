@@ -1,20 +1,228 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="google" content="notranslate">
-<meta name="robots" content="index,follow">
-<meta name="description" content=" ">
-<meta name="keywords" content=" ">
-<!-- Необходимо сделать фавикон через известный сервис и подключить,
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="google" content="notranslate" />
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content=" " />
+    <meta name="keywords" content=" " />
+    <!-- Необходимо сделать фавикон через известный сервис и подключить,
 так же карточки для ссылки в вк, фейсбук, твиттер. Найти как это сделать в папке Оптимизация сайта,
 сделать другой цвет вкладки для разных браузеров. Все в метатегах-->
-<link rel="stylesheet" href="css/main.css">
-<title></title>
-</head>
-<body class="b-page">
-<script src=".js" defer></script>
-</body>
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Иванова&Навай — Психологические консультации онлайн</title>
+  </head>
+  <body class="b-page">
+    <header class="header">
+      <div class="header__layout">
+        <a href="#" class="header__inner-logo">
+          <img
+            class="header__logo-img"
+            src="Иванова&Навай - Психологические консультации.svg"
+            alt="Иванова&Навай - Психологические консультации"
+          />
+        </a>
+        <div class="header__menu">
+          <div class="header__menu-inner-links">
+            <a href="#" class="header__links header__links--hover">Блог</a>
+            <a href="#" class="header__links header__links--hover">Тренинги</a>
+          </div>
+          <a href="#" class="header__menu-burger-link">
+            <span class="header__menu-burger-arrow"></span>
+          </a>
+          <a href="#" class="header__button header__button--hover">
+            <span class="header__button-label">Личный кабинет</span>
+            <svg
+              width="25px"
+              height="25px"
+              class="header__button-icon header__button-icon--visible"
+            >
+              <use xlink:href="sprite.svg#user"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+    <section class="first-screen">
+      <img src="images/bg-smear.svg" class="first-screen__bg-smear" alt="">
+      <div class="first-screen__layout-grid grid-carts">
+        <div class="grid-carts__cart1">
+          <h1 class="grid-carts__cart1-main-title">
+            Психологические консультации доступные каждому
+          </h1>
+          <div class="grid-carts__cart1-inner-subtitle">
+            <p class="grid-carts__cart1-subtitle">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dop
+              ex ea commodo consequat.
+            </p>
+          </div>
+          <p class="grid-carts__cart1-desc-missions">
+            Мы ценим время наших клиентов так же высоко как и оказанное нам
+            доверие и поэтому мы предлагаем различные формы работы:
+          </p>
+          <ul class="grid-carts__cart1-desc-list">
+            <li class="grid-carts__cart1-list-item">
+              1. Традиционные консультации в формате личных или онлайн встреч в
+              Санкт- Петербурге
+            </li>
+            <li class="grid-carts__cart1-list-item">
+              2. Полу-очная терапия (сочетание консультаций и работы над
+              уникальными домашними заданиями, предоставляемых в личном кабинете
+              по мере необходимости).
+            </li>
+          </ul>
+        </div>
+        <div class="grid-carts__cart grid-carts__cart--hover">
+          <div class="grid-carts__wrap-image">
+          <picture> 
+            <source type="image/avif" srcset="images/1image.avif">
+            <source type="image/webp" srcset="images/1image.webp">
+            <img src="images/1image.jpg" class="grid-carts__image" data-src="images/1image.jpg" alt="Апатия | Иванова&Навай — психологические консультации">
+            </picture>
+          </div>
+          <div class="cart-inner-descr ">
+            <p class="cart-inner-descr__descr">
+              У вас апатия? Опускаются руки? Мир стал черно-белым?
+            </p>
+            <a href="#" class="cart-inner-descr__link-test">Пройти</a>
+          </div>
+        </div>
+        <div class="grid-carts__cart grid-carts__cart--hover">
+          <div class="grid-carts__wrap-image">
+            <picture> 
+              <source type="image/avif" srcset="images/2.image.avif">
+              <source type="image/webp" srcset="images/2.image.webp">
+              <img src="images/2.image.jpg" class="grid-carts__image" data-src="images/2.image.jpg" alt="Эмоциональное Выгорание| Иванова&Навай — психологические консультации">
+              </picture>
+            </div>
+          <div class="cart-inner-descr ">
+            <p class="cart-inner-descr__descr">
+              Срываетесь на близких? Чувствуете себя потерянным и одиноким?
+            </p>
+            <a href="#" class="cart-inner-descr__link-test">Пройти</a>
+          </div>
+        </div>
+        <div class="grid-carts__cart grid-carts__cart--hover">
+          <div class="grid-carts__wrap-image">
+            <picture> 
+              <source type="image/avif" srcset="images/3image.avif">
+              <source type="image/webp" srcset="images/3image.webp">
+              <img src="images/3image.jpg" class="grid-carts__image" data-src="images/3image.jpg" alt="Сложности в выборе профессии| Иванова&Навай — психологические консультации">
+              </picture>
+            </div>
+          <div class="cart-inner-descr ">
+            <p class="cart-inner-descr__descr">
+              Не можете определиться со сферой деятельности или вас не устраивает уже выбранная область?            
+              </p>
+            <a href="#" class="cart-inner-descr__link-test">Пройти</a>
+          </div>
+        </div>
+        <div class="grid-carts__cart grid-carts__cart--hover">
+          <div class="grid-carts__wrap-image">
+            <picture> 
+              <source type="image/avif" srcset="images/4image.avif">
+              <source type="image/webp" srcset="images/4image.webp">
+              <img src="images/4image.jpg" class="grid-carts__image" data-src="images/4image.jpg" alt="Эмоциональное Выгорание| Иванова&Навай — психологические консультации">
+              </picture>
+            </div>
+          <div class="cart-inner-descr ">
+            <p class="cart-inner-descr__descr">
+              Едите и не можете остановиться?
+            </p>
+            <a href="#" class="cart-inner-descr__link-test">Пройти</a>
+          </div>
+        </div>
+        <div class="grid-carts__cart grid-carts__cart--hover">
+          <div class="grid-carts__wrap-image">
+            <picture> 
+              <source type="image/avif" srcset="images/5image.avif">
+              <source type="image/webp" srcset="images/5image.webp">
+              <img src="images/5image.jpg" class="grid-carts__image" data-src="images/5image.jpg" alt="Эмоциональное Выгорание| Иванова&Навай — психологические консультации">
+              </picture>
+            </div>
+          <div class="cart-inner-descr ">
+            <p class="cart-inner-descr__descr">
+              Ваш близкий человек пьет? Вы много раз пытались ему помочь, но все без толку?
+            </p>
+            <a href="#" class="cart-inner-descr__link-test">Пройти</a>
+          </div>
+        </div>
+        <div class="grid-carts__cart grid-carts__cart--hover">
+          <div class="grid-carts__wrap-image">
+            <picture> 
+              <source type="image/avif" srcset="images/6image.avif">
+              <source type="image/webp" srcset="images/6image.webp">
+              <img src="images/6image.jpg" class="grid-carts__image" data-src="images/6image.jpg" alt="Эмоциональное Выгорание| Иванова&Навай — психологические консультации">
+              </picture>
+            </div>
+          <div class="cart-inner-descr ">
+            <p class="cart-inner-descr__descr">
+              Вы столкнулись с неразрешимой проблемой? Не знаете как двигаться дальше?
+            </p>
+            <a href="#" class="cart-inner-descr__link-test">Пройти</a>
+          </div>
+        </div>
+        <div class="grid-carts__cart grid-carts__cart--hover">
+          <div class="grid-carts__wrap-image">
+            <picture> 
+              <source type="image/avif" srcset="images/7image.avif">
+              <source type="image/webp" srcset="images/7image.webp">
+              <img src="images/7image.jpg" class="grid-carts__image" data-src="images/7image.jpg" alt="Эмоциональное Выгорание| Иванова&Навай — психологические консультации">
+              </picture>
+            </div>
+          <div class="cart-inner-descr ">
+            <p class="cart-inner-descr__descr">
+              Не можете справиться с эмоциями? Вас накрывает?
+            </p>
+            <a href="#" class="cart-inner-descr__link-test">Пройти</a>
+          </div>
+        </div>
+        <div class="grid-carts__cart grid-carts__cart--hover">
+          <div class="grid-carts__wrap-image">
+            <picture> 
+              <source type="image/avif" srcset="images/9image.avif">
+              <source type="image/webp" srcset="images/9image.webp">
+              <img src="images/9image.jpg" class="grid-carts__image" data-src="images/9image.jpg" alt="Эмоциональное Выгорание| Иванова&Навай — психологические консультации">
+              </picture>
+            </div>
+          <div class="cart-inner-descr ">
+            <p class="cart-inner-descr__descr">
+              Не складывается личная жизнь? На ножах с коллегами?
+            </p>
+            <a href="#" class="cart-inner-descr__link-test">Пройти</a>
+          </div>
+        </div>
+        <div class="grid-carts__cart grid-carts__cart--hover">
+          <div class="grid-carts__wrap-image">
+            <picture> 
+              <source type="image/avif" srcset="images/10image.avif">
+              <source type="image/webp" srcset="images/10image.webp">
+              <img src="images/10image.jpg" class="grid-carts__image" data-src="images/10image.jpg" alt="Эмоциональное Выгорание| Иванова&Навай — психологические консультации">
+              </picture>
+            </div>
+          <div class="cart-inner-descr ">
+            <p class="cart-inner-descr__descr">
+              Страхи? Преследует тревога? Панические атаки?
+            </p>
+            <a href="#" class="cart-inner-descr__link-test">Пройти</a>
+          </div>
+        </div>
+        <div class="grid-carts__cart grid-carts__cart--hover">
+          <picture> 
+            <source type="image/avif" srcset="images/11image.avif">
+            <source type="image/webp" srcset="images/11image.webp">
+            <img src="images/11image.jpg" class="grid-carts__image" data-src="images/11image.jpg" alt="Эмоциональное Выгорание| Иванова&Навай — психологические консультации">
+            </picture>
+          <div class="cart-inner-descr ">
+            <p class="cart-inner-descr__descr">
+              Сексуальная жизнь не удовлетворительна?
+            </p>
+            <a href="#" class="cart-inner-descr__link-test">Пройти</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
