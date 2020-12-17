@@ -4,6 +4,7 @@
 .b-page {
   @extend %reset-body;
   background-color: $page-bg-clr;
+  overflow-y: scroll;
 }
 .header {
   width: 100%;
@@ -68,7 +69,7 @@
   }
   &__menu-burger-link::before,
   &__menu-burger-link::after {
-    content:"";
+    content: "";
     position: absolute;
     width: 50px;
     height: 2px;
@@ -84,7 +85,7 @@
   &__menu-burger-link:hover &__menu-burger-link::before {
     transform: rotate(-45deg);
   }
-  &__menu-burger-link:hover  &__menu-burger-link::after {
+  &__menu-burger-link:hover &__menu-burger-link::after {
     transform: rotate(45deg);
   }
   &__menu-burger-link:hover &__menu-burger-arrow {
@@ -95,144 +96,143 @@
     background-color: $accent-shade;
     color: white;
   }
-    &__button-label {
+  &__button-label {
     font-family: $fonts-progect;
     font-weight: regular;
     font-size: 18px;
-    }
-
-    &__button-icon {
-        display: none;
-    }
   }
-  .first-screen {
-    width: 100%;
-    display: flex;
-    &__bg-smear {
-      position: absolute;
-      left: 10%;
-      top: -5%;
-      z-index: 2;
-    }
-		&__layout-grid {
-		}
+
+  &__button-icon {
+    display: none;
+  }
+}
+.first-screen {
+  width: 100%;
+  display: flex;
+  &__bg-smear {
+    position: absolute;
+    width:50vw;
+    left: 1%;
+    top: 5vw;
+    z-index: 2;
+  }
+  &__layout-grid {
+  }
 }
 .grid-carts {
-margin: auto;
-width: 90%;
-z-index: 3;
-display: grid;
-gap: 10px;
-grid-template-columns: repeat(4, 1fr);
-grid-template-rows: repeat(3, 350px);
-&__cart--hover:hover .cart-inner-descr {
-  transition: 0.3s ease;
-  bottom: 0;
-}
-&__cart {
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0px 2px 15px 0px rgba(0%, 0%, 0%, 0.25);;
-  transition: 0.3s ease;
-}
-&__wrap-image {
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-}
-&__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-		&__cart1 {
-      grid-column: 1/3;
-		}
+  margin: auto;
+  width: 90%;
+  z-index: 3;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 350px);
+  &__cart--hover:hover .cart-inner-descr {
+    transition: 0.3s ease;
+    bottom: 0;
+  }
+  &__cart {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 2px 15px 0px rgba(0%, 0%, 0%, 0.25);
+    transition: 0.3s ease;
+  }
+  &__wrap-image {
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  &__cart1 {
+    height: auto;
+    grid-column: 1/3;
+  }
 
-		&__cart1-main-title {
-      color: $secondary-flow;
-      font-size: 36px;
-      margin: 10px 0 20px 0
-      
-		}
+  &__cart1-main-title {
+    color: $secondary-flow;
+    font-size: 36px;
+    margin: 10px 0 20px 0;
+  }
 
-		&__cart1-inner-subtitle {
-      border: 2px solid  #ffa500;
-      width: 50%;
-      box-sizing: border-box;
-      padding: 10px;
-		}
+  &__cart1-inner-subtitle {
+    border: 2px solid #ffa500;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+  }
 
-		&__cart1-subtitle {
-      margin: 0;
-		}
+  &__cart1-subtitle {
+    margin: 0;
+  }
 
-		&__cart1-desc-missions {
-    }
-    &__cart1-desc-list {
-      list-style: none;
-    }
-    &__cart1-list-item {
+  &__cart1-desc-missions {
+  }
+  &__cart1-desc-list {
+    list-style: none;
+  }
+  &__cart1-list-item {
+  }
+  .cart-inner-descr {
+    position: absolute;
+    bottom: -65px;
+    padding: 0 10px 20px 20px;
+    box-sizing: border-box;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    transition: 0.3s ease;
 
-    }
-.cart-inner-descr {
-  position: absolute;
-  bottom: -65px;
-  padding: 0 10px 20px 20px;
-  box-sizing: border-box;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  transition: 0.3s ease;
-
-		&__descr {
+    &__descr {
       font-family: $fonts-progect;
       font-size: 20px;
       color: white;
       width: 100%;
-		}
+    }
 
-		&__link-test {
+    &__link-test {
       display: inline-block;
       padding: 10px 25px;
       font-family: $fonts-progect;
       border: 1px solid $accent-shade;
       @include reset-link(white);
     }
-}
-
-
-
-@media (max-width:767px) {
-  .header__menu-inner-links {
-    order: 1;
-    z-index: 1;
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100px;
-    background-color: blue;
-  }
-  .header__links {
-    font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (767 - 320)));
-  } 
-  .header__button-icon {
-    display: block;
-  }
-  .header__button-label {
-    display: none;
-    font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (767 - 320)));
-  }
-  .header__menu-burger-link {
-    order: 2;
-    z-index: 2;
-    display: block; 
   }
 }
-
-
-}
+@media (max-width: 767px) {
+    .header__menu-inner-links {
+      order: 1;
+      z-index: 1;
+      position: absolute;
+      display: flex;
+      flex-wrap: wrap;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100px;
+      background-color: blue;
+    }
+    .header__links {
+      font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (767 - 320)));
+    }
+    .header__button-icon {
+      display: block;
+    }
+    .header__button-label {
+      display: none;
+      font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (767 - 320)));
+    }
+    .header__menu-burger-link {
+      order: 2;
+      z-index: 2;
+      display: block;
+    }
+    .grid-carts {
+      grid-template-columns: 1fr; 
+      grid-template-rows: repeat(11, 350px);
+    }
+  }
