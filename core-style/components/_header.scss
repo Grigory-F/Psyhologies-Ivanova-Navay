@@ -1,0 +1,100 @@
+.header {
+    width: 100%;
+    display: flex;
+    &__layout {
+      width: 90%;
+      margin: 10px auto;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__inner-logo {
+      display: block;
+    }
+    &__logo-img {
+      width: calc(120px + (180 - 120) * ((100vw - 320px) / (1600 - 320)));
+      height: 50px;
+    }
+    &__menu {
+      display: flex;
+    }
+    &__menu-inner-links {
+      display: flex;
+    }
+  
+    &__links {
+      @include reset-link(black);
+      font-size: 18px;
+      font-family: $fonts-progect;
+      font-weight: regular;
+      margin: auto 15px;
+      border-bottom: 1px solid transparent;
+      transition: 0.3s;
+    }
+    &__links--hover:hover {
+      border-bottom: 1px solid $color-primary;
+    }
+  
+    &__button {
+      margin: auto 0 auto 15px;
+      text-align: center;
+      padding: 10px 10px;
+      box-sizing: border-box;
+      display: inline-block;
+      @include reset-link(black);
+      border: 1px solid $color-primary;
+      transition: 0.3s;
+    }
+    &__menu-burger-link {
+      @include reset-link(transparent);
+      width: 50px;
+      height: 50px;
+      position: relative;
+      display: none;
+      margin-left: 20px;
+    }
+    &__menu-burger-arrow {
+      position: absolute;
+      top: calc(50% - 1px);
+      background-color: black;
+      width: 100%;
+      height: 2px;
+    }
+    &__menu-burger-link::before,
+    &__menu-burger-link::after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 2px;
+      background-color: black;
+      transition: transform 0.3s;
+    }
+    &__menu-burger-link::before {
+      top: 0;
+    }
+    &__menu-burger-link::after {
+      bottom: 0;
+    }
+    &__menu-burger-link:hover &__menu-burger-link::before {
+      transform: rotate(-45deg);
+    }
+    &__menu-burger-link:hover &__menu-burger-link::after {
+      transform: rotate(45deg);
+    }
+    &__menu-burger-link:hover &__menu-burger-arrow {
+      height: 0;
+    }
+  
+    &__button--hover:hover {
+      background-color: $color-primary;
+      color: white;
+    }
+    &__button-label {
+      font-family: $fonts-progect;
+      font-weight: regular;
+      font-size: 18px;
+    }
+  
+    &__button-icon {
+      display: none;
+    }
+  }
