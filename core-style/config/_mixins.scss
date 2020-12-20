@@ -2,7 +2,7 @@
     text-decoration: none; 
     color: $color;
 }
-@mixin calculate-size-adaptive($property, $startSize, $minSize) {
+@mixin calculate-size($property, $startSize, $minSize, $max-width) {
     $addSize: $startSize - $minSize;
-    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$max-width - 320}));
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / (#{$max-width} - 320)));
 }

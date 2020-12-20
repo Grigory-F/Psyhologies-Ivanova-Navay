@@ -91,6 +91,7 @@
 }
 .advantge {
   display: flex;
+  align-items: center;
   flex-direction: column;
   &__layout-grid {
     margin: 0 auto;
@@ -98,8 +99,9 @@
   }
 
   &__title {
+    width: 90%;
     font-family: $fonts-progect;
-    font-size: 48px;
+    @include calculate-size(font-size,48,30,1440);
     font-weight: 400;
     text-align: center;
   }
@@ -110,7 +112,6 @@
   &__cart {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 50px;
   }
@@ -118,13 +119,14 @@
   &__image--modif {
   }
   &__image {
+    width: 200px;
   }
 
   &__inner-text {
-    width:45%;
     font-family: $fonts-progect;
   }
   &__text-title {
+    margin: 0;
   }
   &__desc {
   }
@@ -224,6 +226,7 @@
   }
   .carts-desc__cart {
     justify-content: center;
+    flex-wrap: wrap;
   }
   .carts-desc____image--modif {
     order: 2;
