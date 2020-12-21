@@ -470,6 +470,7 @@ th {
 .b-page {
   background-color: #F3F3F3;
   overflow-y: scroll;
+  font-family: "CenturyGothic";
 }
 
 .first-screen {
@@ -477,14 +478,6 @@ th {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.first-screen__bg-smear {
-  position: absolute;
-  width: 50vw;
-  left: 1%;
-  top: 5vw;
-  z-index: 2;
 }
 
 .grid-carts {
@@ -538,7 +531,7 @@ th {
 
 .grid-carts__cart1-main-title {
   color: #654321;
-  font-size: 36px;
+  font-size: calc(30px + 6 * ((100vw - 320px) / (1440 - 320)));
   margin: 10px 0 20px 0;
 }
 
@@ -561,7 +554,6 @@ th {
 }
 
 .grid-carts .cart-inner-descr__descr {
-  font-family: "CenturyGothic";
   font-size: 20px;
   color: white;
   width: 100%;
@@ -570,7 +562,6 @@ th {
 .grid-carts .cart-inner-descr__link-test {
   display: inline-block;
   padding: 10px 25px;
-  font-family: "CenturyGothic";
   border: 1px solid #ffa500;
   text-decoration: none;
   color: white;
@@ -596,7 +587,6 @@ th {
 
 .advantge__title {
   width: 90%;
-  font-family: "CenturyGothic";
   font-size: calc(30px + 18 * ((100vw - 320px) / (1440 - 320)));
   font-weight: 400;
   text-align: center;
@@ -619,10 +609,6 @@ th {
 
 .carts-desc__image {
   width: 200px;
-}
-
-.carts-desc__inner-text {
-  font-family: "CenturyGothic";
 }
 
 .carts-desc__text-title {
@@ -742,8 +728,8 @@ th {
   .grid-carts {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: (minmax(200px, 300px))[11];
-        grid-template-rows: repeat(11, minmax(200px, 300px));
+    -ms-grid-rows: (minmax(300px, auto))[11];
+        grid-template-rows: repeat(11, minmax(300px, auto));
   }
   .grid-carts__cart1 {
     -ms-grid-column: 1;

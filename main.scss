@@ -2,18 +2,12 @@
 .b-page {
   background-color: $color-bg;
   overflow-y: scroll;
+  font-family: "CenturyGothic";
 }
 
 .first-screen {
   width: 100%;
   display: flex;
-  &__bg-smear {
-    position: absolute;
-    width: 50vw;
-    left: 1%;
-    top: 5vw;
-    z-index: 2;
-  }
   &__layout-grid {
   }
 }
@@ -52,7 +46,7 @@
 
   &__cart1-main-title {
     color: $color-rarely;
-    font-size: $fs-title-min;
+    @include calculate-size(font-size,36, 30,1440);
     margin: 10px 0 20px 0;
   }
 
@@ -74,7 +68,6 @@
     transition: 0.3s ease;
 
     &__descr {
-      font-family: $fonts-progect;
       font-size: 20px;
       color: white;
       width: 100%;
@@ -83,7 +76,6 @@
     &__link-test {
       display: inline-block;
       padding: 10px 25px;
-      font-family: $fonts-progect;
       border: 1px solid $color-primary;
       @include reset-link(white);
     }
@@ -100,7 +92,6 @@
 
   &__title {
     width: 90%;
-    font-family: $fonts-progect;
     @include calculate-size(font-size,48,30,1440);
     font-weight: 400;
     text-align: center;
@@ -123,7 +114,6 @@
   }
 
   &__inner-text {
-    font-family: $fonts-progect;
   }
   &__text-title {
     margin: 0;
@@ -216,7 +206,7 @@
 @media (max-width: $mobile) {
   .grid-carts {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(11, minmax(200px, 300px));
+    grid-template-rows: repeat(11, minmax(300px, auto));
   }
   .grid-carts__cart1 {
     grid-column: 1/2;
