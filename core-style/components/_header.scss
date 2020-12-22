@@ -11,7 +11,7 @@
   &__inner-link-logo {
     display: block;
     width: 190px;
-    @include calculate-size(width,190,151,1440);
+    @include calculate-size(width, 190, 151, $laptop);
   }
 
   &__logo {
@@ -36,7 +36,7 @@
   &__menu-item-link {
     text-decoration: none;
     color: black;
-    @include calculate-size(font-size,18,16,1440);
+    @include calculate-size(font-size, 18, 16, $laptop);
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.2s ease;
   }
@@ -52,6 +52,7 @@
     padding: 0;
     margin: 0;
     border: none;
+    background-color: transparent;
     position: relative;
   }
   &__burger-arrow {
@@ -61,7 +62,6 @@
     top: 49%;
     left: 0;
     background-color: black;
-
   }
   &__burger-button::before {
     content: "";
@@ -70,7 +70,7 @@
     height: 1px;
     background-color: black;
     position: absolute;
-    top: 0; 
+    top: 0;
   }
   &__burger-button::after {
     content: "";
@@ -79,7 +79,7 @@
     height: 1px;
     background-color: black;
     position: absolute;
-    bottom: 0; 
+    bottom: 0;
   }
 
   &__burger-arrow--js {
@@ -90,22 +90,21 @@
     text-decoration: none;
     color: black;
     border: 1px solid $color-primary;
-    display: block;
+    display: flex;
     padding: 10px 10px;
     margin: auto 0;
-    @include calculate-size(font-size,18,16,1440);
+    @include calculate-size(font-size, 18, 16, $laptop);
     box-sizing: border-box;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
-  &__pa-button-text {
-    color: black;
-  }
+
   &__pa-button--hover:hover {
     background-color: $color-primary;
     color: white;
   }
 
   &__pa-button-icon {
+    margin: auto;
     display: none;
   }
 }
@@ -119,13 +118,13 @@
   position: absolute;
 }
 .header__burger-button::before {
-  top: 0; 
+  top: 0;
 }
 .header__burger-button::after {
-  bottom: 0; 
+  bottom: 0;
 }
 .header__burger-button--js::before {
-  top:50%;
+  top: 50%;
   transform: rotate(-45deg);
 }
 .header__burger-button--js::after {
@@ -134,47 +133,102 @@
 }
 @media screen and (max-width: $mobile + px) {
   .header {
-		&__layout {
-		}
+    &__layout {
+    }
 
-		&__inner-link-logo {
-		}
+    &__inner-link-logo {
+    }
 
-		&__logo {
-		}
+    &__logo {
+    }
 
-		&__menu {
-		}
+    &__menu {
+    }
 
-		&__menu-list {
-		}
+    &__menu-list {
+      position: absolute;
+      top: 0;
+      right: 0px;
+      background-color: blue;
+      width: 50%;
+      height: 100vh;
+      margin: 0;
+      z-index: 20;
+    }
 
-		&__menu-item {
-		}
+    &__menu-item {
+      display: block;
+    }
 
-		&__menu-item-link {
-		}
+    &__menu-item-link {
+    }
 
-		&__menu-item-link--hover {
-		}
+    &__menu-item-link--hover {
+    }
 
-		&__pa-button {
-		}
+    &__pa-button {
+    }
 
-		&__pa-button--hover {
-		}
+    &__pa-button--hover {
+    }
     &__pa-button-anchor {
       display: none;
     }
-		&__pa-button-icon {
+    &__pa-button-icon {
       display: inline-block;
-		}
-
-		&__burger-button {
-		}
-
-		&__burger-arrow {
-		}
+    }
+    &__burger-button {
+      margin: auto;
+      z-index: 21;
+      display: block;
+      outline: none;
+    }
+    &__burger-arrow {
+    }
+  }
 }
+@media screen and (max-width: $tablet + px) {
+  .header {
+    &__layout {
+    }
 
+    &__inner-link-logo {
+    }
+
+    &__logo {
+    }
+
+    &__menu {
+    }
+
+    &__menu-list {
+    }
+
+    &__menu-item {
+    }
+
+    &__menu-item-link {
+    }
+
+    &__menu-item-link--hover {
+    }
+
+    &__pa-button {
+    }
+
+    &__pa-button--hover {
+    }
+    &__pa-button-anchor {
+      display: none;
+    }
+    &__pa-button-icon {
+      display: inline-block;
+    }
+
+    &__burger-button {
+    }
+
+    &__burger-arrow {
+    }
+  }
 }
