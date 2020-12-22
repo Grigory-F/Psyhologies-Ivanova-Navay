@@ -96,9 +96,10 @@
     @include calculate-size(font-size,18,16,1440);
     box-sizing: border-box;
     transition: background-color 0.3s ease, color 0.3s ease;
-    /* text-align: center; */
   }
-
+  &__pa-button-text {
+    color: black;
+  }
   &__pa-button--hover:hover {
     background-color: $color-primary;
     color: white;
@@ -131,9 +132,8 @@
   bottom: 45%;
   transform: rotate(45deg);
 }
-@media screen and (max-width: $mobile) {
+@media screen and (max-width: $mobile + px) {
   .header {
-
 		&__layout {
 		}
 
@@ -163,7 +163,9 @@
 
 		&__pa-button--hover {
 		}
-
+    &__pa-button-anchor {
+      display: none;
+    }
 		&__pa-button-icon {
       display: inline-block;
 		}

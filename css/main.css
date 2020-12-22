@@ -444,7 +444,10 @@ th {
           box-sizing: border-box;
   -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
-  /* text-align: center; */
+}
+
+.header__pa-button-text {
+  color: black;
 }
 
 .header__pa-button--hover:hover {
@@ -486,7 +489,10 @@ th {
           transform: rotate(45deg);
 }
 
-@media screen and (max-width: 480) {
+@media screen and (max-width: 480px) {
+  .header__pa-button-anchor {
+    display: none;
+  }
   .header__pa-button-icon {
     display: inline-block;
   }
