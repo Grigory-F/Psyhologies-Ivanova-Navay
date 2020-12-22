@@ -73,11 +73,15 @@
       width: 100%;
     }
 
-    &__link-test {
+    &__button-test {
       display: inline-block;
       padding: 10px 25px;
       border: 1px solid $color-primary;
+      transition: background-color 0.3s ease;
       @include reset-link(white);
+    }
+    &__button-test--hover:hover {
+      background-color: $color-primary;
     }
   }
 }

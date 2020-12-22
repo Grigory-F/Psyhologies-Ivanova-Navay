@@ -16,56 +16,62 @@
   </head>
   <body class="b-page">
     <header class="header">
-      <div class="header__layout">
-        <a href="#" class="header__inner-logo">
+      <nav class="header__layout">
+        <a href="#" class="header__inner-link-logo">
           <img
-            class="header__logo-img"
-            src="Иванова&Навай - Психологические консультации.svg"
+            class="header__logo"
+            src="images/ivanova&navay-logo.svg"
             alt="Иванова&Навай - Психологические консультации"
           />
         </a>
-        <nav class="header__menu">
-          <div class="header__menu-inner-links">
-            <a href="#" class="header__links header__links--hover">Блог</a>
-            <a href="#" class="header__links header__links--hover">Тренинги</a>
-          </div>
-          <button href="#" class="header__burger-button" aria-label="menu-burger">
-            <span class="header__menu-burger-arrow"></span>
-          </button>
-          <a href="#" class="header__button header__button--hover">
-            Личный кабинет
-            <svg
-              width="25px"
-              height="25px"
-              class="header__button-icon header__button-icon--visible"
-            >
-              <use xlink:href="images/sprite.svg#user"></use>
-            </svg>
-          </a>
-        </nav>
-      </div>
-    </header>
-    <section class="first-screen">
-      <div class="first-screen__layout-grid grid-carts">
-        <div class="grid-carts__cart1">
-          <h1 class="grid-carts__cart1-main-title">
-            Психологические консультации доступные каждому
-          </h1>
-          <p class="grid-carts__cart1-desc-missions">
-            Мы ценим время наших клиентов так же высоко как и оказанное нам
-            доверие и поэтому мы предлагаем различные формы работы:
-          </p>
-          <ul class="grid-carts__cart1-desc-list">
-            <li class="grid-carts__cart1-list-item">
-              1. Традиционные консультации в формате личных или онлайн встреч в
-              Санкт- Петербурге
+        <div class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a
+                href="#"
+                class="header__menu-item-link header__menu-item-link--hover"
+                >Блог</a
+              >
             </li>
-            <li class="grid-carts__cart1-list-item">
-              2. Полу-очная терапия (сочетание консультаций и работы над
-              уникальными домашними заданиями, предоставляемых в личном кабинете
-              по мере необходимости).
+            <li class="header__menu-item">
+              <a
+                href="#"
+                class="header__menu-item-link header__menu-item-link--hover"
+              >
+                Тренинги
+              </a>
             </li>
           </ul>
+          <a href="#" class="header__pa-button header__pa-button--hover">
+            Личный кабинет
+            <svg width="20px" height="20px" class="header__pa-button-icon">
+              <use xlink:href="images/sprite.svg#user-head"></use>
+            </svg>
+          </a>
+          <button
+            class="header__burger-button"
+            aria-label="menu-burger"
+          >
+            <span class="header__burger-arrow"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <section class="first-screen">
+      <div class="first-screen__grid grid-carts">
+        <div class="grid-carts__cart1 first-cart">
+          <h1 class="first-cart__title">
+            Психологические консультации доступные каждому
+          </h1>
+          <p class="first-cart__subtitle">
+            Мы ценим время наших клиентов так же высоко как и оказанное нам
+            доверие и поэтому мы предлагаем различные формы работы: 
+            1.
+            Традиционные консультации в формате личных или онлайн встреч в
+            Санкт- Петербурге 2. Полу-очная терапия (сочетание консультаций и
+            работы над уникальными домашними заданиями, предоставляемых в личном
+            кабинете по мере необходимости).
+          </p>
         </div>
         <div class="grid-carts__cart grid-carts__cart--hover">
           <div class="grid-carts__wrap-image">
@@ -84,7 +90,7 @@
             <p class="cart-inner-descr__descr">
               У вас апатия? Опускаются руки? Мир стал черно-белым?
             </p>
-            <a href="#" class="cart-inner-descr__link-test">Пройти тест</a>
+            <a href="#" class="cart-inner-descr__button-test cart-inner-descr__button-test--hover">Пройти тест</a>
           </div>
         </div>
         <div class="grid-carts__cart grid-carts__cart--hover">
@@ -104,7 +110,7 @@
             <p class="cart-inner-descr__descr">
               Срываетесь на близких? Чувствуете себя потерянным и одиноким?
             </p>
-            <a href="#" class="cart-inner-descr__link-test">Пройти тест</a>
+            <a href="#" class="cart-inner-descr__button-test cart-inner-descr__button-test--hover">Пройти тест</a>
           </div>
         </div>
         <div class="grid-carts__cart grid-carts__cart--hover">
@@ -125,7 +131,7 @@
               Не можете определиться со сферой деятельности или вас не
               устраивает уже выбранная область?
             </p>
-            <a href="#" class="cart-inner-descr__link-test">Пройти тест</a>
+            <a href="#" class="cart-inner-descr__button-test cart-inner-descr__button-test--hover">Пройти тест</a>
           </div>
         </div>
         <div class="grid-carts__cart grid-carts__cart--hover">
@@ -145,7 +151,7 @@
             <p class="cart-inner-descr__descr">
               Едите и не можете остановиться?
             </p>
-            <a href="#" class="cart-inner-descr__link-test">Пройти тест</a>
+            <a href="#" class="cart-inner-descr__button-test cart-inner-descr__button-test--hover">Пройти тест</a>
           </div>
         </div>
         <div class="grid-carts__cart grid-carts__cart--hover">
@@ -166,7 +172,7 @@
               Ваш близкий человек пьет? Вы много раз пытались ему помочь, но все
               без толку?
             </p>
-            <a href="#" class="cart-inner-descr__link-test">Пройти тест</a>
+            <a href="#" class="cart-inner-descr__button-test cart-inner-descr__button-test--hover">Пройти тест</a>
           </div>
         </div>
         <div class="grid-carts__cart grid-carts__cart--hover">
@@ -187,7 +193,7 @@
               Вы столкнулись с неразрешимой проблемой? Не знаете как двигаться
               дальше?
             </p>
-            <a href="#" class="cart-inner-descr__link-test">Пройти тест</a>
+            <a href="#" class="cart-inner-descr__button-test cart-inner-descr__button-test--hover">Пройти тест</a>
           </div>
         </div>
         <div class="grid-carts__cart grid-carts__cart--hover">
@@ -207,7 +213,7 @@
             <p class="cart-inner-descr__descr">
               Не можете справиться с эмоциями? Вас накрывает?
             </p>
-            <a href="#" class="cart-inner-descr__link-test">Пройти тест</a>
+            <a href="#" class="cart-inner-descr__button-test cart-inner-descr__button-test--hover">Пройти тест</a>
           </div>
         </div>
         <div class="grid-carts__cart grid-carts__cart--hover">
@@ -227,7 +233,7 @@
             <p class="cart-inner-descr__descr">
               Не складывается личная жизнь? На ножах с коллегами?
             </p>
-            <a href="#" class="cart-inner-descr__link-test">Пройти тест</a>
+            <a href="#" class="cart-inner-descr__button-test cart-inner-descr__button-test--hover">Пройти тест</a>
           </div>
         </div>
         <div class="grid-carts__cart grid-carts__cart--hover">
@@ -247,7 +253,7 @@
             <p class="cart-inner-descr__descr">
               Страхи? Преследует тревога? Панические атаки?
             </p>
-            <a href="#" class="cart-inner-descr__link-test">Пройти тест</a>
+            <a href="#" class="cart-inner-descr__button-test cart-inner-descr__button-test--hover">Пройти тест</a>
           </div>
         </div>
         <div class="grid-carts__cart grid-carts__cart--hover">
@@ -265,7 +271,7 @@
             <p class="cart-inner-descr__descr">
               Сексуальная жизнь не удовлетворительна?
             </p>
-            <a href="#" class="cart-inner-descr__link-test">Пройти тест</a>
+            <a href="#" class="cart-inner-descr__button-test cart-inner-descr__button-test--hover">Пройти тест</a>
           </div>
         </div>
       </div>
@@ -364,19 +370,14 @@
           src="images/security-bg-img.png"
           data-src="images/security-bg-img.png"
           class="security__bg-img"
-          style="
-            object-fit: cover;
-            object-position: center center;
-            max-width: 100%;
-          "
           alt=""
         />
       </picture>
       <div class="security__container">
         <h2 class="security__title">Все данные конфиденциальны</h2>
         <p class="security__subtitle">
-          Иформация зашифрована в нашей умной базе данных, которую не сможет
-          открыть никто без Вашего разрешения.
+          Иформация зашифрована в системе, которую не сможет открыть никто без
+          Вашего разрешения.
         </p>
         <a href="#" class="security__button">Зарегистрироваться</a>
       </div>
@@ -471,41 +472,64 @@
     </section>
     <section class="call">
       <div class="call__wrap">
-      <div class="call__inner-text">
-        <h3 class="call__title">Звоните!</h3>
-        <p class="call__subtitle">Мы на связи в любом удобном для вас сервисе или мессенджере</p>
-        <h4 class="call__t-number">8(902) 518-01-85</h4>
-      </div>
-      <div class="call__inner-links">
-        <p class="call__subtitle">Так же можете написать нам на почту <span class="call__subtitle-part">example@gmail.com</span></p>
-        <div class="call__links">
-          <svg>
-          <use xlink:href="images/sprite.svg#vk"></use>
-          </svg>
+        <div class="call__inner-text">
+          <h3 class="call__title">Звоните!</h3>
+          <p class="call__subtitle">
+            Мы на связи в любом удобном для вас сервисе или мессенджере
+          </p>
+          <h4 class="call__t-number">8(902) 518-01-85</h4>
         </div>
-      </div>
+        <div class="call__inner-links">
+          <p class="call__subtitle">
+            Так же можете написать нам на почту
+            <span class="call__subtitle-part">example@gmail.com</span>
+          </p>
+          <div class="call__links">
+            <svg>
+              <use xlink:href="images/sprite.svg#vk"></use>
+            </svg>
+          </div>
+        </div>
       </div>
     </section>
     <footer class="footer">
       <h2 class="footer__title">Иванова&Навай</h2>
       <nav class="footer__inner-links">
         <ul class="footer__list-links">
-          <li class="footer__list-item"><a href="#" class="footer__list-link">Политика конфиденциальности</a></li>
-          <li class="footer__list-item"><a href="#" class="footer__list-link">Согласие на обработку персональных данных</a></li>
+          <li class="footer__list-item">
+            <a href="#" class="footer__list-link"
+              >Политика конфиденциальности</a
+            >
+          </li>
+          <li class="footer__list-item">
+            <a href="#" class="footer__list-link"
+              >Согласие на обработку персональных данных</a
+            >
+          </li>
         </ul>
         <ul class="footer__inner-links">
-          <li class="footer__list-item"><a href="#" class="footer__list-link">Пользовательское соглашение</a></li>
+          <li class="footer__list-item">
+            <a href="#" class="footer__list-link"
+              >Пользовательское соглашение</a
+            >
+          </li>
         </ul>
         <ul class="footer__inner-links">
-          <li class="footer__list-item"><a href="#" class="footer__list-link">Блог</a></li>
-          <li class="footer__list-item"><a href="#" class="footer__list-link">Регистрация</a></li>
-          <li class="footer__list-item"><a href="#" class="footer__list-link">Личный кабинет</a></li>
+          <li class="footer__list-item">
+            <a href="#" class="footer__list-link">Блог</a>
+          </li>
+          <li class="footer__list-item">
+            <a href="#" class="footer__list-link">Регистрация</a>
+          </li>
+          <li class="footer__list-item">
+            <a href="#" class="footer__list-link">Личный кабинет</a>
+          </li>
         </ul>
       </nav>
       <div class="footer__link-partner">
         <a href="#">
           <svg>
-          <use xlink:href="images/sprite.svg#pushisty-code"></use>
+            <use xlink:href="images/sprite.svg#pushisty-code"></use>
           </svg>
         </a>
       </div>
