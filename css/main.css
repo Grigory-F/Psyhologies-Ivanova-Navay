@@ -699,7 +699,7 @@ th {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url(security-bg-img.avif);
+  background-image: url(../images/security-bg-img.avif);
   background-size: cover;
   background-position: center;
 }
