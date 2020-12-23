@@ -331,6 +331,25 @@ th {
     }
   }
    */
+.header__pa-button, .security__button {
+  text-decoration: none;
+  color: black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  font-size: calc(16px + 2 * ((100vw - 320px) / (1024 - 320)));
+  padding: 10px;
+  margin: auto 0;
+  border: 1px solid #ffa500;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header__pa-button--hover:hover, .security__button--hover:hover {
+  background-color: #ffa500;
+  color: white;
+}
+
 .header {
   width: 100%;
   display: -webkit-box;
@@ -368,11 +387,13 @@ th {
 .header__menu-list {
   padding: 0;
   margin-right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .header__menu-item {
-  display: inline-block;
-  margin: 0 10px;
+  margin: auto 10px;
   list-style: none;
 }
 
@@ -434,24 +455,9 @@ th {
 }
 
 .header__pa-button {
-  text-decoration: none;
-  color: black;
-  border: 1px solid #ffa500;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 10px 10px;
-  margin: auto 0;
-  font-size: calc(16px + 2 * ((100vw - 320px) / (1024 - 320)));
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.header__pa-button--hover:hover {
-  background-color: #ffa500;
-  color: white;
 }
 
 .header__pa-button-icon {
@@ -547,8 +553,8 @@ th {
   gap: 10px;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: (350px)[3];
-      grid-template-rows: repeat(3, 350px);
+  -ms-grid-rows: (minmax(270px, auto))[3];
+      grid-template-rows: repeat(3, minmax(270px, auto));
 }
 
 .grid-carts__cart--hover:hover .cart-inner-descr {
@@ -635,6 +641,7 @@ th {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -654,33 +661,76 @@ th {
 }
 
 .carts-desc {
-  max-width: 600px;
+  width: 90%;
 }
 
 .carts-desc__cart {
-  width: 100%;
+  width: 55%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 50px;
+  margin: 0 auto 15px auto;
 }
 
 .carts-desc__image {
-  width: 200px;
+  width: 150px;
+  margin: 0 20px;
 }
 
 .carts-desc__text-title {
   margin: 0;
 }
 
-.text--modif {
+.carts-desc__desc {
+  margin: 0;
+}
+
+.carts-desc .text--modif {
   text-align: right;
 }
 
-@media (max-width: 1440) {
+.security {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  background-image: url(/images/security-bg-img.avif);
+  background-size: cover;
+  background-position: center;
+}
+
+.security__container {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.security__bg-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+.security__title {
+  margin: 0;
+}
+
+.security__subtitle {
+  width: 50%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+@media (max-width: 1440px) {
   .grid-carts {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
@@ -712,8 +762,13 @@ th {
   .grid-carts {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: (350px)[6];
-        grid-template-rows: repeat(6, 350px);
+    -ms-grid-rows: (minmax(300px, 1fr))[6];
+        grid-template-rows: repeat(6, minmax(300px, 1fr));
+  }
+  .first-cart {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
   }
 }
 

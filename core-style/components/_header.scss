@@ -25,11 +25,11 @@
   &__menu-list {
     padding: 0;
     margin-right: 30px;
+    display: flex;
   }
 
   &__menu-item {
-    display: inline-block;
-    margin: 0 10px;
+    margin: auto 10px;
     list-style: none;
   }
 
@@ -87,20 +87,12 @@
   }
 
   &__pa-button {
-    text-decoration: none;
-    color: black;
-    border: 1px solid $color-primary;
+    @extend %main-button;
     display: flex;
-    padding: 10px 10px;
-    margin: auto 0;
-    @include calculate-size(font-size, 18, 16, $laptop);
-    box-sizing: border-box;
-    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   &__pa-button--hover:hover {
-    background-color: $color-primary;
-    color: white;
+    @extend %main-button-hover;
   }
 
   &__pa-button-icon {
