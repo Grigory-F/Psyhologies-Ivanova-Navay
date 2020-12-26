@@ -3,7 +3,13 @@
   background-color: $color-bg;
   font-family: "CenturyGothic";
 }
-
+.main-title {
+  width: 90%;
+  @include calculate-size(font-size, 38, 30, $laptop);
+  font-weight: 400;
+  text-align: center;
+  @include calculate-value(margin, 20, 10, $laptop, auto);
+}
 .first-screen {
   width: 100%;
   display: flex;
@@ -19,19 +25,16 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, minmax(270px, auto));
   &__cart--hover:hover .cart-inner-descr {
-    transition: 0.3s ease;
     bottom: 0;
   }
   &__cart {
     position: relative;
     overflow: hidden;
     box-shadow: 0px 2px 15px 0px rgba(0%, 0%, 0%, 0.25);
-    transition: 0.3s ease;
   }
   &__wrap-image {
     height: 100%;
     position: absolute;
-    overflow: hidden;
   }
   &__image {
     width: 100%;
@@ -48,7 +51,7 @@
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
-  transition: 0.3s ease;
+  transition: bottom $anime-act;
 
   &__descr {
     font-size: 20px;
@@ -60,8 +63,9 @@
     display: inline-block;
     padding: 10px 25px;
     border: 1px solid $color-primary;
-    transition: background-color 0.3s ease;
-    @include reset-link(white);
+    transition: background-color $anime-act;
+    color: white;
+    text-decoration: none;
   }
   &__button-test--hover:hover {
     background-color: $color-primary;
@@ -91,32 +95,46 @@
   }
 
   &__title {
-    width: 90%;
-    @include calculate-size(font-size, 48, 30, $laptop);
+    @include calculate-size(font-size, 38, 30, $laptop);
     font-weight: 400;
     text-align: center;
+    @include calculate-value(margin, 20, 10, $laptop, auto);
   }
 }
 .carts-desc {
   width: 90%;
   &__cart {
-    width: 55%;
+    width: 100%;
+    max-width: 600px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin: 0 auto 15px auto;
+  }
+  &__cart:last-child {
+    margin: 0 auto;
   }
 
   &__image--modif {
   }
   &__image {
-    width: 150px;
+    width: 100%;
+    max-width: 200px;
     margin: 0 20px;
   }
 
   &__inner-text {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-  
+
   &__text-title {
-    margin: 0;
+    @include calculate-size(font-size,24,20,$laptop);
+    margin: 0 0 10px 0;
+    font-weight: 400;
   }
   &__desc {
     margin: 0;
@@ -128,33 +146,28 @@
 .security {
   width: 100%;
   display: flex;
-  background-color: white;
+  background: white;
   flex-direction: column;
-  background-image: url(/images/security-bg-img.avif);
-  background-size: cover;
-  background-position: center;
+  position: relative;
   &__container {
-    margin: 20px auto;
+    width: 50%;
+    margin: 30px auto;
     text-align: center;
-
+    z-index: 2;
   }
   &__bg-separator {
+    z-index: 3;
   }
   &__bg-img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
+    @extend %bg-image;
   }
   &__title {
     margin: 0;
+    font-weight: 400;
   }
 
   &__subtitle {
-    width: 50%;
     margin: 10px auto;
-    text-align: center;
   }
   &__button {
     @extend %main-button;
@@ -164,84 +177,177 @@
   }
 }
 .questions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &__container {
+    margin: auto;
+    width: 50%;
   }
-
-  &__container--js {
-  }
-
   &__title {
+    text-align: center;
+    @include calculate-size(font-size, 38, 30, $laptop);
+    font-weight: 400;
+    width: 90%;
+    @include calculate-value(margin, 20, 10, $laptop, auto);
   }
-
   &__inner-question {
   }
-
   &__wrap-title-btn {
+    padding: 15px 20px;
+    box-shadow: $main-shadow;
+    background-color: white;
+    display: flex;
+    margin: 0 0 20px 0;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
   }
-
-  &__wrap-title-btn--js {
-  }
-
   &__question-title {
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
   }
-
   &__arrow-btn {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    transition: transform $anime-act;
   }
-
+  &__arrow-btn::before,
+  &__arrow-btn::after {
+    content: "";
+    width: 50%;
+    height: 2px;
+    top: 50%;
+    background-color: black;
+    position: absolute;
+  }
+  &__arrow-btn::before {
+    left: 2px;
+    transform: rotate(40deg);
+  }
+  &__arrow-btn::after {
+    right: 3px;
+    transform: rotate(-40deg);
+  }
+  &__arrow-btn--js {
+    transform: rotate(180deg);
+  }
   &__answer {
+    margin: 0 0 20px 0;
+    padding: 10px 20px;
+    background-color: white;
   }
-
   &__answer--js {
+    display: none;
   }
 }
 .call {
-
+  position: relative;
+  padding: 20px 0;
+  &__bg-img {
+    @extend %bg-image;
+    z-index: -1;
+  }
   &__wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    margin: 0 auto;
+    width: 90%;
+    box-sizing: border-box;
+    border: $border-bold;
+    color: white;
   }
 
   &__inner-text {
   }
 
   &__title {
+    color: white;
+    @include calculate-size(font-size,42,36,$laptop);
+    font-weight: 400;
+    margin: 0;
   }
-
   &__subtitle {
+    @include calculate-size(font-size,30,24,$laptop);
+    color: rgba(255, 255, 255,0.5);
+    margin: 0 0 20px 0;
+  }
+  &__subtitle-part {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
   }
 
   &__t-number {
+    text-decoration: none;
+    color: white;
+    margin: 0;
+    @include calculate-size(font-size,58,52,$laptop);
+    font-weight: 700;
   }
 
   &__inner-links {
   }
 
   &__subtitle-part {
+    display: block;
   }
 
-  &__links {
+  &__wrap-links {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__inner-link-icon {
+    display: block;
   }
 }
 .footer {
-
-  &__title {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-top: 15px;
+  &__wrap {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
   }
-
+  &__title {
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+  }
   &__inner-links {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   &__list-links {
+    padding: 0;
+    margin-right: 30px;
   }
 
   &__list-item {
+    list-style: none;
+    margin-bottom: 10px;
   }
-
   &__list-link {
+    color: $cr-dark-bg;
+    transition: color $anime-act;
   }
-
-  &__link-partner {
+  &__list-link-hover:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+  &__partner-link {
+    display: block;
+    height: 100px;
+    background-color: blue;
+    width: 100px;
+  }
+  &__partner-logo {
   }
 }
-
-
 @media (max-width: $desctop + px) {
   .grid-carts {
     grid-template-columns: repeat(4, 1fr);
@@ -267,7 +373,6 @@
   }
   .first-cart {
     grid-column: 1/3;
-
   }
 }
 

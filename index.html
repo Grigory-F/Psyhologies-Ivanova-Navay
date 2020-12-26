@@ -315,10 +315,19 @@
         </div>
       </div>
     </section>
-    <section class="advantge" height>
-      <h1 class="advantge__title">Преимущества платной подписки</h1>
+    <section class="advantge">
       <div class="advantge__layout-grid carts-desc">
+        <h1 class="advantge__title">Преимущества платной подписки</h1>
         <div class="carts-desc__cart">
+          <div class="carts-desc__inner-text">
+            <h2 class="carts-desc__text-title">
+              Возможность проходить рекомендованные тесты
+            </h2>
+            <p class="carts-desc__desc">
+              Ваш психолог будет присылать вам тесты, подходящие для вашей
+              проблемы, и&nbsp;сохранять их&nbsp;результаты для разбора
+            </p>
+          </div>
           <picture>
             <source type="image/avif" srcset="images/image-abv1.avif" />
             <source type="image/webp" srcset="images/image-abv1.webp" />
@@ -326,29 +335,11 @@
               src="images/image-abv1.png"
               data-src="images/image-abv1.png"
               alt=""
-              class="carts-desc__image"
+              class="carts-desc__image carts-desc__image--modif"
             />
           </picture>
-          <div class="carts-desc__inner-text">
-            <h2 class="carts-desc__text-title">
-              Возможность проходить рекомендованные тесты
-            </h2>
-            <p class="carts-desc__desc">
-              Ваш психолог будет присылать вам тесты, подходящие для вашей
-              проблемы, и сохранять их результаты для разбора
-            </p>
-          </div>
         </div>
         <div class="carts-desc__cart">
-          <div class="carts-desc__inner-text text--modif">
-            <h2 class="carts-desc__text-title">
-              Ведение своего дневника терапии
-            </h2>
-            <p class="carts-desc__desc">
-              Записывайте все, считаете нужным. Это поможет вам структурировать
-              свои мылси для продуктивной терапии.
-            </p>
-          </div>
           <picture>
             <source type="image/avif" srcset="images/image-abv2.avif" />
             <source type="image/webp" srcset="images/image-abv2.webp" />
@@ -359,8 +350,23 @@
               class="carts-desc__image carts-desc__image--modif"
             />
           </picture>
+          <div class="carts-desc__inner-text text--modif">
+            <h2 class="carts-desc__text-title">
+              Ведение своего дневника терапии
+            </h2>
+            <p class="carts-desc__desc">
+              Записывайте все, считаете нужным. Это поможет вам структурировать
+              свои мылси для продуктивной терапии.
+            </p>
+          </div>
         </div>
         <div class="carts-desc__cart">
+          <div class="carts-desc__inner-text text--modif">
+            <h2 class="carts-desc__text-title">Полу-очная терапия</h2>
+            <p class="carts-desc__desc">
+              Прохождение домашних заданий дистанционно
+            </p>
+          </div>
           <picture>
             <source type="image/avif" srcset="images/image-abv3.avif" />
             <source type="image/webp" srcset="images/image-abv3.webp" />
@@ -368,26 +374,11 @@
               src="images/image-abv3.png"
               data-src="images/image-abv3.png"
               alt=""
-              class="carts-desc__image"
+              class="carts-desc__image carts-desc__image--modif"
             />
           </picture>
-          <div class="carts-desc__inner-text">
-            <h2 class="carts-desc__text-title">Полу-очная терапия</h2>
-            <p class="carts-desc__desc">
-              Прохождение домашних заданий дистанционно
-            </p>
-          </div>
         </div>
         <div class="carts-desc__cart">
-          <div class="carts-desc__inner-text text--modif">
-            <h2 class="carts-desc__text-title">
-              Открывать результаты для терапевта
-            </h2>
-            <p class="carts-desc__desc">
-              Вы можете открыть доступ своему психологу к результатам тестов и
-              записей в дневнике
-            </p>
-          </div>
           <picture>
             <source type="image/avif" srcset="images/image-abv4.avif" />
             <source type="image/webp" srcset="images/image-abv4.webp" />
@@ -398,14 +389,20 @@
               class="carts-desc__image"
             />
           </picture>
+          <div class="carts-desc__inner-text text--modif">
+            <h2 class="carts-desc__text-title">
+              Открывать результаты для терапевта
+            </h2>
+            <p class="carts-desc__desc">
+              Вы&nbsp;можете открыть доступ своему психологу к&nbsp;результатам
+              тестов и записей в&nbsp;дневнике
+            </p>
+          </div>
         </div>
       </div>
     </section>
     <section class="security">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 55">
-        <path fill="#F3F3F3" d="M1920,0L1920,0L0,55V0H1920z" />
-      </svg>
-      <!--  <picture>
+      <picture>
         <source type="image/avif" srcset="images/security-bg-img.avif" />
         <source type="image/webp" srcset="images/security-bg-img.webp" />
         <img
@@ -414,7 +411,14 @@
           class="security__bg-img"
           alt=""
         />
-      </picture> -->
+      </picture>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1920 55"
+        class="security__bg-separator"
+      >
+        <path fill="#F3F3F3" d="M1920,0L1920,0L0,55V0H1920z" />
+      </svg>
       <div class="security__container">
         <h2 class="security__title">Все данные конфиденциальны</h2>
         <p class="security__subtitle">
@@ -425,28 +429,51 @@
           >Зарегистрироваться</a
         >
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 55">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1920 55"
+        class="security__bg-separator"
+      >
         <path fill="#F3F3F3" d="M0,55L0,55L1920,0v55H0z" />
       </svg>
     </section>
     <section class="questions">
-      <!-- <picture>
-        <source type="image/avif" srcset="images/security-bg-img.avif" />
-        <source type="image/webp" srcset="images/security-bg-img.webp" />
-        <img
-          src="images/security-bg-img.png"
-          data-src="images/security-bg-img.png"
-          class="questions__bg-img"
-          style="
-            object-fit: cover;
-            object-position: center center;
-            max-width: 100%;
-          "
-          alt=""
-        />
-      </picture> -->
+      <h2 class="questions__title">Частно задаваемые вопросы</h2>
       <div class="questions__container questions__container--js">
-        <h2 class="questions__title">Частно задаваемые вопросы</h2>
+        <div class="questions__inner-question">
+          <div class="questions__wrap-title-btn questions__wrap-title-btn--js">
+            <h3 class="questions__question-title">
+              Что ожидать от консультации?
+            </h3>
+            <div class="questions__arrow-btn"></div>
+          </div>
+          <p class="questions__answer questions__answer--js">
+            Создадим открытые и доверительные отношения между Вами и психологом.
+            Ознакомимся с Вашими индивидуальными чертами и с волнующей Вас
+            проблемой. Обозначим основные переживания и, а так же углубимся в
+            понимание их причин. Совместно с Вами разрботаем индивидуальный план
+            терапии, основанный на комбинациях психологических методик, и
+            сделаем конкретные шаги по устранению проблемы. Обозначим следующие
+            шаги, которые можно выполнять индивидуально и/или с нашей помощью.
+          </p>
+        </div>
+        <div class="questions__inner-question">
+          <div class="questions__wrap-title-btn questions__wrap-title-btn--js">
+            <h3 class="questions__question-title">
+              Что ожидать от консультации?
+            </h3>
+            <div class="questions__arrow-btn"></div>
+          </div>
+          <p class="questions__answer questions__answer--js">
+            Создадим открытые и доверительные отношения между Вами и психологом.
+            Ознакомимся с Вашими индивидуальными чертами и с волнующей Вас
+            проблемой. Обозначим основные переживания и, а так же углубимся в
+            понимание их причин. Совместно с Вами разрботаем индивидуальный план
+            терапии, основанный на комбинациях психологических методик, и
+            сделаем конкретные шаги по устранению проблемы. Обозначим следующие
+            шаги, которые можно выполнять индивидуально и/или с нашей помощью.
+          </p>
+        </div>
         <div class="questions__inner-question">
           <div class="questions__wrap-title-btn questions__wrap-title-btn--js">
             <h3 class="questions__question-title">
@@ -518,67 +545,95 @@
       </div>
     </section>
     <section class="call">
+      <picture>
+        <source type="image/webp" srcset="images/call-bg-img.webp" />
+        <img
+          src="images/call-bg-img.png"
+          data-src="images/call-bg-img.png"
+          class="call__bg-img"
+          alt=""
+        />
+      </picture>
       <div class="call__wrap">
         <div class="call__inner-text">
           <h3 class="call__title">Звоните!</h3>
           <p class="call__subtitle">
             Мы на связи в любом удобном для вас сервисе или мессенджере
           </p>
-          <h4 class="call__t-number">8(902) 518-01-85</h4>
+          <a href="tel:+78142332211" class="call__t-number">8(902) 518-01-85</a>
         </div>
         <div class="call__inner-links">
           <p class="call__subtitle">
             Так же можете написать нам на почту
             <span class="call__subtitle-part">example@gmail.com</span>
           </p>
-          <div class="call__links">
-            <svg>
-              <use xlink:href="images/sprite.svg#vk"></use>
-            </svg>
+          <div class="call__wrap-links">
+            <a href="#" class="call__inner-link-icon">
+              <svg width="100px" height="100px">
+                <use xlink:href="images/sprite.svg#skype"></use>
+              </svg>
+            </a>
+            <a href="#" class="call__inner-link-icon">
+              <svg width="100px" height="100px">
+                <use xlink:href="images/sprite.svg#telegram"></use>
+              </svg>
+            </a>
+            <a href="skype:[draggon_3348301]" class="call__inner-link-icon">
+              <svg width="100px" height="100px">
+                <use xlink:href="images/sprite.svg#watsapp"></use>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
     </section>
     <footer class="footer">
       <h2 class="footer__title">Иванова&Навай</h2>
-      <nav class="footer__inner-links">
-        <ul class="footer__list-links">
-          <li class="footer__list-item">
-            <a href="#" class="footer__list-link"
-              >Политика конфиденциальности</a
-            >
-          </li>
-          <li class="footer__list-item">
-            <a href="#" class="footer__list-link"
-              >Согласие на обработку персональных данных</a
-            >
-          </li>
-        </ul>
-        <ul class="footer__inner-links">
-          <li class="footer__list-item">
-            <a href="#" class="footer__list-link"
-              >Пользовательское соглашение</a
-            >
-          </li>
-        </ul>
-        <ul class="footer__inner-links">
-          <li class="footer__list-item">
-            <a href="#" class="footer__list-link">Блог</a>
-          </li>
-          <li class="footer__list-item">
-            <a href="#" class="footer__list-link">Регистрация</a>
-          </li>
-          <li class="footer__list-item">
-            <a href="#" class="footer__list-link">Личный кабинет</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="footer__link-partner">
-        <a href="#">
-          <svg>
-            <use xlink:href="images/sprite.svg#pushisty-code"></use>
-          </svg>
-        </a>
+      <div class="footer__wrap">
+        <nav class="footer__inner-links">
+          <ul class="footer__list-links">
+            <li class="footer__list-item">
+              <a href="#" class="footer__list-link footer__list-link-hover"
+                >Блог</a
+              >
+            </li>
+            <li class="footer__list-item">
+              <a href="#" class="footer__list-link footer__list-link-hover"
+                >Регистрация</a
+              >
+            </li>
+            <li class="footer__list-item">
+              <a href="#" class="footer__list-link footer__list-link-hover"
+                >Личный кабинет</a
+              >
+            </li>
+          </ul>
+          <ul class="footer__list-links">
+            <li class="footer__list-item">
+              <a href="#" class="footer__list-link footer__list-link-hover"
+                >Политика конфиденциальности</a
+              >
+            </li>
+            <li class="footer__list-item">
+              <a href="#" class="footer__list-link footer__list-link-hover"
+                >Согласие на обработку персональных данных</a
+              >
+            </li>
+          </ul>
+          <ul class="footer__list-links">
+            <li class="footer__list-item">
+              <a href="#" class="footer__list-link footer__list-link-hover"
+                >Пользовательское соглашение</a
+              >
+            </li>
+            <li class="footer__list-item">
+              <a href="#" class="footer__list-link footer__list-link-hover"
+                >Тренинги</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <a href="#" class="footer__partner-link"> </a>
       </div>
     </footer>
   </body>

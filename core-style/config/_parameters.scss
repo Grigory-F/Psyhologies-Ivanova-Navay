@@ -7,48 +7,56 @@ $color-secondary: #888;
 $color-tretiary: #e0e0e0;
 $color-lightest: #654321;
 $color-brand: #239bf6;
-$color-bg: #F3F3F3;
+$color-bg: #f3f3f3;
 
-$color-rarely: #654321; 
+$color-rarely: #654321;
+// Цвета
+$cr-dark-bg: rgba(255, 255, 255, 0.5);
+$cr-title: #654321;
+$cr-subtitle: #654321;
+$cr-text: #654321;
 
-$c-title: #654321;
-$c-subtitle: #654321;
-$c-text: #654321;
- 
 // Border
-$border-light: solid 1px rgba(0, 0, 0, .05);
+$border-bold: solid 3px #ffa500;
+$border-light: solid 1px rgba(0, 0, 0, 0.5);
 
 /* Shadows */
-$main-shadow: 0px 2px 15px 0px #000000 25%;
- 
+$main-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.25);
+
 // Font size
-$fs-title: 40px;
-$fs-title-min: 36px;
-$fs-subtitle: 1.2rem;
-$fs-subtitle-min: 1.2rem;
-$fs-base: 1rem;
-$fs-small: .9rem;
-$fssmallest: .75rem;
- 
+$fs-title-b: 40px;
+$fs-title-s: 30px;
+
+$fs-title-bs: 28px;
+$fs-title-ss: 20px;
+
+$fs-subtitle-b: 1.2rem;
+$fs-subtitle-s: 1.2rem;
+
+$fs-link-b: 1.2rem;
+$fs-link-s: 1.2rem;
+
+$fs-mtext-b: 1.2rem;
+$fs-mtext-s: 1.2rem;
 // Отступы
-$s-small: .75rem;
+$s-small: 0.75rem;
 $s-single: 1rem;
 $s-double: 2rem;
 $s-triple: 3rem;
 $s-big: 6rem;
- 
+
 // Media queries
 $desctop: 1440;
 $laptop: 1024;
 $tablet: 768;
 $mobile: 480;
- 
+
 // Шрифты
 $font-title: "CenturyGothic";
 $font-subtitle: "CenturyGothic";
 $font-base: "CenturyGothic";
- 
-// Анимация 
-$anime-in: .4s;
-$anime-out: .5s;
 
+// Анимация
+$anime-act: .2s ease;
+$anime-in: 0.4s;
+$anime-out: 0.5s;
