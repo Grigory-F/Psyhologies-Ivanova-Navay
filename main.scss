@@ -132,12 +132,12 @@
   }
 
   &__text-title {
-    @include calculate-size(font-size,24,20,$laptop);
     margin: 0 0 10px 0;
     font-weight: 400;
   }
   &__desc {
     margin: 0;
+    color: rgba(0, 0, 0, 0.7);
   }
   .text--modif {
     text-align: right;
@@ -257,6 +257,7 @@
     padding: 15px 30px;
     margin: 0 auto;
     width: 90%;
+    flex-wrap: wrap;
     box-sizing: border-box;
     border: $border-bold;
     color: white;

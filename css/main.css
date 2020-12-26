@@ -719,13 +719,13 @@ th {
 }
 
 .carts-desc__text-title {
-  font-size: calc(20px + 4 * ((100vw - 320px) / (1024 - 320)));
   margin: 0 0 10px 0;
   font-weight: 400;
 }
 
 .carts-desc__desc {
   margin: 0;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .carts-desc .text--modif {
@@ -881,6 +881,8 @@ th {
   padding: 15px 30px;
   margin: 0 auto;
   width: 90%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: solid 3px #ffa500;
