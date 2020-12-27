@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="google" content="notranslate" />
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content=" " />
+    <meta name="keywords" content=" " />
+    <!-- Необходимо сделать фавикон через известный сервис и подключить,
+так же карточки для ссылки в вк, фейсбук, твиттер. Найти как это сделать в папке Оптимизация сайта,
+сделать другой цвет вкладки для разных браузеров. Все в метатегах-->
+    <link rel="stylesheet" href="css/registration.css" />
+    <title>Регистрация</title>
+  </head>
+  <body class="page">
+    <section class="regist">
+      <div class="regist__wrap">
+        <div class="regist__head">
+          <h1 class="regist__title">Регистраиця</h1>
+          <a href="#" class="regist__auth">Авторизация</a>
+        </div>
+        <form method="POST" action="/" class="regist__form form">
+          <div class="form__inner-input">
+            <input
+              type="text"
+              name="names"
+              class="form__input"
+              placeholder="Имя или псевдоним"
+            />
+            <p class="form__input-warning form__input-warning--visible">
+              Имя должно содержать минимум 5 букв.
+            </p>
+          </div>
+          <div class="form__inner-input">
+            <input
+              type="tel"
+              name="telephone"
+              class="form__input"
+              placeholder="Номер телефона"
+            />
+            <p class="form__input-warning form__input-warning--visible">
+              Пароли не соответсвуют
+            </p>
+          </div>
+          <div class="form__inner-input">
+            <input
+              type="password"
+              name="password"
+              class="form__input"
+              placeholder="Пароль"
+            />
+            <p class="form__input-warning form__input-warning--visible">
+              Пароль должен содержать
+            </p>
+          </div>
+          <div class="form__inner-input">
+            <input
+              type="password"
+              name="password"
+              class="form__input"
+              placeholder="Подтвердите пароль"
+            />
+            <p class="form__input-warning form__input-warning--visible">
+              Пароли не соответсвуют
+            </p>
+          </div>
+          <div class="form__button-act form__button-act--js">Далее</div>
+          <div class="form__inner-input">
+            <input
+              type="number"
+              name="reqired-tel"
+              placeholder="Код подтверждения"
+              class="form__input form__input--js"
+            />
+            <p class="form__timer-label">
+              Отправить повторно через:
+              <span class="form__timer--js">100 </span>
+              сек
+            </p>
+          </div>
+          <input
+            type="submit"
+            value="Зарегистрироваться"
+            class="form__submit form__submit--js"
+          />
+        </form>
+      </div>
+    </section>
+    <script src=".js" defer></script>
+  </body>
+</html>

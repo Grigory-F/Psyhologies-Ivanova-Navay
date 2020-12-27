@@ -23,7 +23,7 @@
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, minmax(270px, auto));
+  grid-template-rows: repeat(3, minmax(22.5vw, auto));
   &__cart--hover:hover .cart-inner-descr {
     bottom: 0;
   }
@@ -74,13 +74,41 @@
 
 .first-cart {
   grid-column: 1/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   &__title {
     color: $color-rarely;
     @include calculate-size(font-size, 48, 28, $desctop);
     line-height: 1;
-    margin: 5px 0 20px 0;
+    margin: 0;
   }
   &__subtitle {
+    font-size: 20px;
+  }
+  &__wrap-text {
+    width: 100%;
+    border: $border-bold;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+  }
+
+  &__inner-text {
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+
+  &__number {
+    font-size: 20px;
+    margin-right: 15px;
+    color: #00FFB2;
+  }
+
+  &__text {
+    font-size: 20px;
+    margin: 0 15px 0 0;
   }
 }
 
@@ -107,14 +135,9 @@
     width: 100%;
     max-width: 600px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 auto 15px auto;
+    margin: 0 auto 50px auto;
   }
-  &__cart:last-child {
-    margin: 0 auto;
-  }
-
   &__image--modif {
   }
   &__image {
@@ -139,7 +162,7 @@
     margin: 0;
     color: rgba(0, 0, 0, 0.7);
   }
-  .text--modif {
+  &__inner-text--modif {
     text-align: right;
   }
 }
@@ -167,7 +190,7 @@
   }
 
   &__subtitle {
-    margin: 10px auto;
+    margin: 20px auto;
   }
   &__button {
     @extend %main-button;
@@ -177,12 +200,10 @@
   }
 }
 .questions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   &__container {
-    margin: auto;
-    width: 50%;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 800px;
   }
   &__title {
     text-align: center;
@@ -198,19 +219,19 @@
     box-shadow: $main-shadow;
     background-color: white;
     display: flex;
-    margin: 0 0 20px 0;
+    margin: 0 0 30px 0;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
   }
   &__question-title {
-    margin: 0;
+    margin: 0 10px 0 0;
     font-weight: 400;
     font-size: 20px;
   }
   &__arrow-btn {
-    width: 30px;
-    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
     cursor: pointer;
     position: relative;
     transition: transform $anime-act;
@@ -253,8 +274,7 @@
   }
   &__wrap {
     display: flex;
-    justify-content: space-between;
-    padding: 15px 30px;
+    padding: 30px 20px;
     margin: 0 auto;
     width: 90%;
     flex-wrap: wrap;
@@ -262,47 +282,28 @@
     border: $border-bold;
     color: white;
   }
-
   &__inner-text {
   }
-
   &__title {
     color: white;
-    @include calculate-size(font-size,42,36,$laptop);
+    @include calculate-size(font-size, 42, 36, $laptop);
     font-weight: 400;
     margin: 0;
   }
   &__subtitle {
-    @include calculate-size(font-size,30,24,$laptop);
-    color: rgba(255, 255, 255,0.5);
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5);
     margin: 0 0 20px 0;
   }
   &__subtitle-part {
     color: rgba(255, 255, 255, 1);
     font-weight: 700;
   }
-
   &__t-number {
     text-decoration: none;
     color: white;
     margin: 0;
-    @include calculate-size(font-size,58,52,$laptop);
-    font-weight: 700;
-  }
-
-  &__inner-links {
-  }
-
-  &__subtitle-part {
-    display: block;
-  }
-
-  &__wrap-links {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  &__inner-link-icon {
-    display: block;
+    @include calculate-size(font-size, 48, 32, $laptop);
   }
 }
 .footer {
@@ -349,7 +350,7 @@
   &__partner-logo {
   }
 }
-@media (max-width: $desctop + px) {
+/* @media (max-width: $desctop + px) {
   .grid-carts {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, auto);
@@ -357,7 +358,7 @@
   .grid-carts__cart1 {
     grid-column: 1/4;
   }
-}
+} */
 @media (max-width: $laptop + px) {
   .grid-carts {
     grid-template-columns: repeat(2, 1fr);
@@ -385,9 +386,6 @@
   .first-cart {
     grid-column: 1/2;
   }
-  .text--modif {
-    text-align: center;
-  }
   .carts-desc__cart {
     justify-content: center;
     flex-wrap: wrap;
@@ -399,5 +397,50 @@
     width: 100%;
     order: 1;
     text-align: center;
+  }
+  .carts-desc__text-title {
+    margin-top: 10px;
+  }
+  .security {
+    &__container {
+      width: 90%;
+      margin: 30px auto;
+      text-align: center;
+      z-index: 2;
+    }
+  }
+  .carts-desc__inner-text--modif {
+    text-align: center;
+  }
+  .call {
+    &__bg-img {
+    }
+    &__wrap {
+      padding: 20px 15px;
+    }
+
+    &__inner-text {
+    }
+
+    &__title {
+    }
+    &__subtitle {
+      &__subtitle-part {
+      }
+
+      &__t-number {
+      }
+
+      &__inner-links {
+      }
+
+      &__subtitle-part {
+      }
+
+      &__wrap-links {
+      }
+      &__inner-link-icon {
+      }
+    }
   }
 }
