@@ -6,7 +6,9 @@
 }
 .regist {
   width: 100%;
+  height: 100vh;
   &__wrap {
+    margin-top: 150px;
   }
 
   &__head {
@@ -22,6 +24,7 @@
     color: $cr-text-second;
     text-decoration: none;
     border-bottom: 1px solid $cr-text-second;
+    margin: 5px 0;
   }
 
   &__form {
@@ -29,7 +32,7 @@
 }
 .form {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 20px;
   &__slider {
     width: 100%;
     overflow: hidden;
@@ -46,7 +49,7 @@
     padding: 30px 20px;
     border: $border-bold;
     width: 100%;
-    max-width: 450px;
+    max-width: 350px;
   }
 
   &__inner-input {
@@ -103,10 +106,9 @@
     width: 100%;
     padding: 15px;
     background-color: none;
-    border: 2px solid $color-primary;
+    border: 3px solid $color-primary;
     font-size: 20px;
     transition: background-color $anime-act, color $anime-act;
-    margin-bottom: -10px;
     cursor: pointer;
   }
 
@@ -118,11 +120,17 @@
   &__submit--js {
   }
 }
-@media (max-width: $mobile + px) {
+@media (max-width: $tablet + px) {
   .form {
     &__inner-input {
       @include calculate-size(margin-bottom, 15, 5, $mobile);
     }
   }
+  .regist {
+    width: 100%;
+    height: 100vh;
+    &__wrap {
+      @include calculate-size(margin-top, 150, 0, $mobile);
+    }
   
-}
+}}
