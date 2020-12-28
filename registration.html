@@ -11,80 +11,116 @@
     <!-- Необходимо сделать фавикон через известный сервис и подключить,
 так же карточки для ссылки в вк, фейсбук, твиттер. Найти как это сделать в папке Оптимизация сайта,
 сделать другой цвет вкладки для разных браузеров. Все в метатегах-->
-    <link rel="stylesheet" href="css/registration.css" />
+    <link rel="stylesheet" href="css/registration-authorization.css" />
     <title>Регистрация</title>
   </head>
   <body class="page">
     <section class="regist">
       <div class="regist__wrap">
         <div class="regist__head">
-          <h1 class="regist__title">Регистраиця</h1>
-          <a href="#" class="regist__auth">Авторизация</a>
+          <h1 class="regist__title">Регистрация</h1>
+          <a href="authorization.html" target="_self" class="regist__auth"
+            >Уже зарегистрированы?</a
+          >
         </div>
         <form method="POST" action="/" class="regist__form form">
-          <div class="form__inner-input">
-            <input
-              type="text"
-              name="names"
-              class="form__input"
-              placeholder="Имя или псевдоним"
-            />
-            <p class="form__input-warning form__input-warning--visible">
-              Имя должно содержать минимум 5 букв.
-            </p>
+          <div class="form__slider">
+            <div class="form__wrap-slide">
+              <div class="form__slide">
+                <div class="form__inner-input">
+                  <input
+                    type="text"
+                    name="names"
+                    class="form__input"
+                    placeholder="Имя или псевдоним"
+                  />
+                  <p
+                    class="form__input-warning form__input-warning--visible-js"
+                  >
+                    Имя должно содержать минимум 5 букв.
+                  </p>
+                </div>
+                <div class="form__inner-input">
+                  <input
+                    type="tel"
+                    name="telephone"
+                    class="form__input"
+                    placeholder="Номер телефона"
+                  />
+                  <p
+                    class="form__input-warning form__input-warning--visible-js"
+                  >
+                    Неверный формат номера телефона
+                  </p>
+                </div>
+                <div class="form__inner-input">
+                  <input
+                    type="password"
+                    name="password"
+                    class="form__input"
+                    placeholder="Пароль"
+                  />
+                  <p
+                    class="form__input-warning form__input-warning--visible-js"
+                  >
+                    Пароль должен содержать
+                  </p>
+                </div>
+                <div class="form__inner-input">
+                  <input
+                    type="password"
+                    name="password"
+                    class="form__input"
+                    placeholder="Повторите пароль"
+                  />
+                  <p
+                    class="form__input-warning form__input-warning--visible-js"
+                  >
+                    Пароли не соответсвуют
+                  </p>
+                </div>
+                <div class="form__button-act form__button-act--js">Далее</div>
+                <a href="personal-area.html">Следующая страница</a>
+                <p class="form__input-warning form__button-act--js">
+                  Такой пользователь уже зарегистрирован
+                </p>
+              </div>
+            </div>
+
+            <div class="form__wrap-slide">
+              <div class="form__slide">
+                <div class="form__inner-input">
+                  <div class="form__wrap-title">
+                    <h2 class="form__slide-title">
+                      Введите код отправленный по СМС
+                    </h2>
+                    <div class="form__inner-tel-number">
+                      <p class="form__tel-number">8(902)518-01-85</p>
+                      <p class="form__tel-correction">Изменить номер</p>
+                    </div>
+                  </div>
+                  <input
+                    type="number"
+                    name="code-verifi"
+                    class="form__input"
+                    placeholder="Код из смс"
+                    autocomplete="off"
+                    maxlength="4"
+                  />
+                  <p
+                    class="form__input-warning form__input-warning--visible-js"
+                  >
+                    Пароли не соответсвуют
+                  </p>
+                </div>
+                <input
+                  type="submit"
+                  value="Зарегистрироваться"
+                  class="form__submit form__submit--hover form__submit--js"
+                />
+              </div>
+            </div>
           </div>
-          <div class="form__inner-input">
-            <input
-              type="tel"
-              name="telephone"
-              class="form__input"
-              placeholder="Номер телефона"
-            />
-            <p class="form__input-warning form__input-warning--visible">
-              Пароли не соответсвуют
-            </p>
-          </div>
-          <div class="form__inner-input">
-            <input
-              type="password"
-              name="password"
-              class="form__input"
-              placeholder="Пароль"
-            />
-            <p class="form__input-warning form__input-warning--visible">
-              Пароль должен содержать
-            </p>
-          </div>
-          <div class="form__inner-input">
-            <input
-              type="password"
-              name="password"
-              class="form__input"
-              placeholder="Подтвердите пароль"
-            />
-            <p class="form__input-warning form__input-warning--visible">
-              Пароли не соответсвуют
-            </p>
-          </div>
-          <div class="form__button-act form__button-act--js">Далее</div>
-          <div class="form__inner-input">
-            <input
-              type="number"
-              name="reqired-tel"
-              placeholder="Код подтверждения"
-              class="form__input form__input--js"
-            />
-            <p class="form__timer-label">
-              Отправить повторно через:
-              <span class="form__timer--js">100 </span>
-              сек
-            </p>
-          </div>
-          <input
-            type="submit"
-            value="Зарегистрироваться"
-            class="form__submit form__submit--js"
-          />
         </form>
       </div>
     </section>
