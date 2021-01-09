@@ -1,20 +1,18 @@
 .header {
   width: 100%;
-  display: flex;
   &__layout {
-    margin: 20px auto;
-    width: 90%;
+    margin: 10px auto!important;
     display: flex;
     justify-content: space-between;
   }
 
   &__inner-link-logo {
-    display: block;
-    width: 190px;
-    @include calculate-size(width, 190, 151, $laptop);
+    display: flex;
+    width: 151px;
   }
 
   &__logo {
+    margin: auto;
     width: 100%;
   }
 
@@ -36,7 +34,7 @@
   &__menu-item-link {
     text-decoration: none;
     color: black;
-    @include calculate-size(font-size, 18, 16, $laptop);
+    
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.2s ease;
   }

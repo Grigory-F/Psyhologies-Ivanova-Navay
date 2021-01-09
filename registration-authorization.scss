@@ -24,8 +24,10 @@
   &__auth {
     color: $cr-text-second;
     text-decoration: none;
+    font-size: 14px;
     border-bottom: 1px solid $cr-text-second;
-    margin: 5px 0;
+  }
+  &__auth--right {
   }
 
   &__form {
@@ -57,6 +59,10 @@
     width: 100%;
     margin-bottom: 15px;
   }
+  &__inner-input--text-center {
+    text-align: center;
+    margin-bottom: 0;
+  }
 
   &__input {
     box-sizing: border-box;
@@ -79,7 +85,8 @@
     box-sizing: border-box;
     padding: 10px 0;
     text-align: center;
-    border: 2px solid black;
+    color: rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(0, 0, 0, 0.3);
   }
 
   &__button-act--js {

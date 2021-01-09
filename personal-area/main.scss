@@ -1,0 +1,622 @@
+@import "core-style/_core.scss";
+.page {
+  margin: 0;
+  background-color: $color-bg;
+  font-family: $fonts-progect;
+}
+.content-layout {
+  width: 1300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "aside main main"
+    "aside main main"
+    ". main main";
+  gap: 15px;
+  margin: 20px auto;
+}
+.aside {
+  grid-area: aside;
+}
+.nav {
+  box-shadow: $main-shadow;
+  margin-bottom: 20px;
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item-button {
+    padding: 15px 25px;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+  }
+  &__line-button {
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: $color-active;
+  }
+
+  &__item-button--active {
+    background-color: $color-active;
+  }
+  &__item-button--active &__line-button--active {
+    background-color: $color-primary;
+  }
+
+  &__button-label {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  &__button-label--disable {
+  }
+
+  &__button-mess {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: $color-secondary;
+    width: 50px;
+    height: 100%;
+    display: flex;
+  }
+
+  &__button-mess-num {
+    margin: auto;
+    color: $color-primary;
+    font-weight: 700;
+  }
+
+  &__button-mess-part {
+  }
+}
+.consult {
+  padding: 25px;
+  background-color: $color-secondary;
+  box-shadow: $main-shadow;
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+    color: white;
+  }
+  &__inner-button {
+  }
+
+  &__desc-icon {
+    width: 20px;
+    height: 20px;
+    display: none;
+  }
+  .button-desc {
+  }
+
+  &__button-desc {
+    margin: 0;
+    color: $cr-dark-bg;
+    font-size: 14px;
+    border-bottom: 1px solid $cr-dark-bg;
+    cursor: poiner;
+  }
+
+  &__button-desc--hover {
+  }
+
+  &__separator {
+    border: none;
+    background-color: white;
+    height: 1px;
+    margin: 10px 0 0 0;
+  }
+
+  &__body {
+  }
+
+  &__non-fict {
+    margin: 0;
+    font-size: 20px;
+    color: $cr-dark-bg;
+    margin: 20px 0 0 0;
+  }
+
+  &__non-fict--hidden {
+  }
+}
+.button-desc {
+}
+
+.communicat {
+  margin: 20px 0 0 0;
+  display: grid;
+  gap: 15px;
+  &__wrap {
+    display: flex;
+  }
+
+  &__inner {
+    margin-right: 20px;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+  }
+
+  &__label-icon {
+    width: 15px;
+    height: 15px;
+    margin: 0 10px 0 0;
+  }
+
+  &__label-sign {
+    color: $cr-dark-bg;
+    margin: 0;
+  }
+
+  &__value {
+    margin: 0;
+    color: white;
+    font-size: 28px;
+  }
+}
+.main {
+  grid-area: main;
+  width: 100%;
+  padding: 25px;
+  box-sizing: border-box;
+  box-shadow: $main-shadow;
+}
+.tests {
+  &__head-title {
+    margin: 20px 0;
+    font-size: 48px;
+    font-weight: 400;
+  }
+
+  &__body {
+  }
+
+  &__wrap-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+
+  &__button-more {
+  }
+
+  &__button-more--hover {
+  }
+}
+.appoint-consult {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    margin: 0 0 20px 0;
+    font-size: 20px;
+  }
+
+  &__wrap-tel {
+    display: flex;
+  }
+
+  &__inner-tel {
+    margin-right: 30px;
+  }
+  &__inner-tel:last-child {
+    margin: 0;
+  }
+
+  &__name {
+    margin: 0 0 5px 0;
+    font-size: 28px;
+  }
+
+  &__tel {
+    margin: 0;
+    font-size: 32px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid black;
+  }
+
+  &__line {
+    border: none;
+    background-color: gray;
+    height: 1px;
+    margin: 35px 0 0;
+  }
+}
+.test {
+  width: 100%;
+  position: relative;
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__cont-plug {
+    padding: 20px;
+    position: relative;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__head {
+  }
+
+  &__name {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+    color: white;
+  }
+
+  &__trans-time {
+    margin: 0;
+    color: $cr-dark-bg;
+  }
+
+  &__time-part {
+    color: white;
+  }
+
+  &__control {
+    margin: 15px 0 0 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__button-link {
+    padding: 10px 20px;
+    display: block;
+    border: $border-light-prim;
+    text-decoration: none;
+    color: white;
+    box-sizing: border-box;
+    margin-right: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &__button-link--hover {
+  }
+
+  &__button-desc {
+    color: white;
+    margin: 0;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+  }
+
+  &__button-desc--hover {
+  }
+}
+.button-ex {
+}
+.button-des {
+}
+.button-ax {
+}
+.recom-test {
+}
+.pass-test {
+}
+.ther-dairy {
+}
+.home-work {
+}
+@media (max-width: $desctop + px) {
+  .content-layout {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "aside main main"
+      "aside main main"
+      ". main main";
+    gap: 15px;
+    margin: 20px auto;
+  }
+
+  .appoint-consult {
+    &__title {
+      margin: 0;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__wrap-tel {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__inner-tel {
+    }
+    &__inner-tel:last-child {
+    }
+
+    &__name {
+      margin: 0 0 5px 0;
+      font-size: 28px;
+    }
+
+    &__tel {
+      margin: 0;
+      @include calculate-size(font-size, 32, 28, $desctop);
+      text-decoration: none;
+      color: black;
+      border-bottom: 2px solid black;
+    }
+
+    &__line {
+      border: none;
+      background-color: gray;
+      height: 1px;
+      margin: 35px 0 0;
+    }
+  }
+
+  .tests {
+    &__head-title {
+      margin: 20px 0;
+      @include calculate-size(font-size, 48, 42, $desctop);
+      font-weight: 400;
+    }
+
+    &__body {
+    }
+
+    &__wrap-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 10px;
+    }
+
+    &__button-more {
+    }
+
+    &__button-more--hover {
+    }
+  }
+}
+
+@media (max-width: $desctop-min + px) {
+  .content-layout {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "aside main main"
+      "aside main main"
+      ". main main";
+    gap: 15px;
+    margin: 20px auto;
+  }
+
+  .consult {
+    padding: 25px;
+    background-color: $color-secondary;
+    box-shadow: $main-shadow;
+    &__head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__title {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 400;
+      color: white;
+    }
+    &__desc-icon {
+      display: block;
+    }
+    &__button-desc {
+      display: none;
+    }
+
+    &__button-desc--hover {
+    }
+
+    &__separator {
+      border: none;
+      background-color: white;
+      height: 1px;
+      margin: 10px 0 0 0;
+    }
+
+    &__body {
+    }
+
+    &__non-fict {
+      margin: 0;
+      font-size: 20px;
+      color: $cr-dark-bg;
+      margin: 20px 0 0 0;
+    }
+
+    &__non-fict--hidden {
+    }
+  }
+
+  .tests {
+    &__head-title {
+      margin: 20px 0;
+      @include calculate-size(font-size, 48, 42, $desctop);
+      font-weight: 400;
+    }
+
+    &__body {
+    }
+
+    &__wrap-content {
+    }
+
+    &__button-more {
+    }
+
+    &__button-more--hover {
+    }
+  }
+}
+
+@media (max-width: $laptop + px) {
+  .content-layout {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 75px 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "aside main main"
+      "aside main main"
+      ". main main";
+    gap: 15px;
+    margin: 20px auto;
+  }
+  .consult {
+    padding: 15px;
+    background-color: $color-secondary;
+    box-shadow: $main-shadow;
+    &__head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__title {
+      display: none;
+    }
+    &__desc-icon {
+      display: block;
+    }
+    &__button-desc {
+      display: none;
+    }
+
+    &__button-desc--hover {
+    }
+
+    &__separator {
+      display: none;
+    }
+
+    &__body {
+      display: none;
+    }
+
+    &__non-fict {
+      margin: 0;
+      font-size: 20px;
+      color: $cr-dark-bg;
+      margin: 20px 0 0 0;
+    }
+
+    &__non-fict--hidden {
+    }
+  }
+
+  .tests {
+    &__head-title {
+      margin: 20px 0;
+      @include calculate-size(font-size, 48, 42, $desctop);
+      font-weight: 400;
+    }
+
+    &__body {
+    }
+
+    &__wrap-content {
+    }
+
+    &__button-more {
+    }
+
+    &__button-more--hover {
+    }
+  }
+
+  .nav {
+    box-shadow: $main-shadow;
+    margin-bottom: 20px;
+    &__list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &__item-button {
+      padding: 15px 25px;
+      box-sizing: border-box;
+      position: relative;
+      cursor: pointer;
+    }
+    &__line-button {
+      width: 10px;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: $color-active;
+    }
+
+    &__item-button--active {
+      background-color: $color-active;
+    }
+    &__item-button--active &__line-button--active {
+      background-color: $color-primary;
+    }
+
+    &__button-label {
+      display: none;
+    }
+
+    &__button-label--disable {
+    }
+
+    &__button-mess {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: $color-secondary;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      border-radius: 50%;
+    }
+
+    &__button-mess-num {
+      margin: auto;
+      color: $color-primary;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    &__button-mess-part {
+    }
+  }
+}
