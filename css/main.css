@@ -475,7 +475,7 @@ button {
     display: flex;
     position: absolute;
     z-index: 100;
-    right: 0;
+    right: 100%;
     top: 0;
     background-color: #f3f3f3;
     padding: 20px;
@@ -590,7 +590,7 @@ button {
     content: "";
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 1px;
     background-color: rgba(0, 0, 0, 0.5);
     display: block;
   }
@@ -602,9 +602,9 @@ button {
   }
   .header__burger-arrow {
     width: 100%;
-    height: 2px;
+    height: 1px;
     position: absolute;
-    top: calc(50% - 1px);
+    top: 50%;
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
   }
@@ -1001,8 +1001,6 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transform: translateX(-150px);
-          transform: translateX(-150px);
 }
 
 .slider__slide {
