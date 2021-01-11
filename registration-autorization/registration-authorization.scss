@@ -17,7 +17,8 @@
   }
 
   &__title {
-    font-size: 38px;
+    font-size: 48px;
+    font-weight: 400;
     margin: 0;
   }
 
@@ -96,18 +97,25 @@
   }
 
   &__slide-title {
-    margin: 0;
-    font-size: 28px;
+    margin: 0 0 20px 0;
+    font-size: 26px;
     font-weight: 400;
   }
 
-  &__inner-tel-number {
+  &__inner-email {
+    margin-bottom: 20px;
   }
 
-  &__tel-number {
+  &__email {
+    font-size: 24px;
+    margin: 0;
   }
 
-  &__tel-correction {
+  &__email-correction {
+    margin: 10px 0 0 0;
+    color: $cr-text-second;
+    border-bottom: 1px solid $cr-text-second;
+    display: inline-block;
   }
 
   &__submit {
