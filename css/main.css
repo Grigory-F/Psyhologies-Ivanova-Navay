@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -828,7 +829,6 @@ button {
 .psy {
   margin: 0 auto;
   max-width: 100%;
-  min-height: 430px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -865,16 +865,6 @@ button {
 .psy-desc {
   min-width: 400px;
   max-width: 470px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .psy-desc__text--modif {
@@ -888,13 +878,23 @@ button {
   margin: 0 0 5px 0;
 }
 
-.psy-desc__title--two {
+.psy-desc__title-two {
   border: none;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+
+.psy-desc__sub-subtitle {
+  margin: 0 0 20px 0;
+  font-size: 18px;
 }
 
 .psy-desc__subtitle {
+  margin: 0 0 10px 0;
+  font-family: Calibri;
   font-size: 18px;
-  margin: 0;
+  font-style: italic;
 }
 
 .psy-desc__button {
@@ -906,6 +906,9 @@ button {
   transition: 0.3s;
   border: 1px solid #ffa500;
   text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
 }
 
 .psy-desc__button--hover:hover {
@@ -1279,7 +1282,7 @@ button {
             box-sizing: border-box;
   }
   .reviews-slider__title {
-    font-size: 20px;
+    font-size: 20цpx;
     font-weight: 400;
     margin: 0 0 10px 0;
   }

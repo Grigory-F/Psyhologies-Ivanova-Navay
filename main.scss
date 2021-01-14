@@ -269,7 +269,6 @@
 .psy {
   margin: 0 auto;
   max-width: 100%;
-  min-height: 430px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 70px;
@@ -279,7 +278,7 @@
     max-width: 300px;
     position: relative;
     margin-right: 20px;
-    box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.25);
   }
   &__photo--modif {
     margin: 0 0 0 20px;
@@ -301,11 +300,6 @@
 .psy-desc {
   min-width: 400px;
   max-width: 470px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  &__text {
-  }
   &__text--modif {
     text-align: right;
   }
@@ -316,28 +310,38 @@
     display: inline-block;
     margin: 0 0 5px 0;
   }
-  &__title--two {
+  &__title-two {
     border: none;
-  }
-
-  &__subtitle {
+    font-weight: 400;
     font-size: 18px;
-    margin: 0;
+    margin: 0 0 10px 0;
   }
-		&__button {
-      font-size: 18px;
-      color: black;
-      text-decoration: none;
-      padding: 10px 20px;
-      transition: 0.3s;
-      border: 1px solid $color-primary;
-      text-align: center;
-		}
+  &__sub-subtitle {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+  }
+  &__subtitle {
+    margin: 0 0 10px 0;
+    font-family: Calibri;
+    font-size: 18px;
+    font-style: italic;
+  }
+  &__button {
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: 0.3s;
+    border: 1px solid $color-primary;
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-block;
+  }
 
-		&__button--hover:hover {
-        color: white;
-        background-color: $color-primary;
-		}
+  &__button--hover:hover {
+    color: white;
+    background-color: $color-primary;
+  }
 }
 
 .advantge {
@@ -563,16 +567,15 @@
       border: 0px none #ffffff;
       border-radius: 44px;
     }
-    
+
     &::-webkit-scrollbar-corner {
       background: transparent;
     }
-    
+
     &::-webkit-scrollbar-corner:active {
       background: transparent;
     }
-    }
-  
+  }
 
   &__text {
     margin: 0 20px 0 0;
@@ -648,7 +651,7 @@
       box-sizing: border-box;
     }
     &__title {
-      font-size: 20px;
+      font-size: 20цpx;
       font-weight: 400;
       margin: 0 0 10px 0;
     }
@@ -1046,19 +1049,19 @@
     &__subtitle {
       font-size: 16px;
     }
-}
-.questions {
-  &__container {
-    max-width: 600px;
-    margin-bottom: -10px;
   }
-  &__title {
-    text-align: center;
+  .questions {
+    &__container {
+      max-width: 600px;
+      margin-bottom: -10px;
+    }
+    &__title {
+      text-align: center;
+    }
   }
-}
-.quest {
-  &__wrap-title-btn {
-    margin: 0 0 10px;
+  .quest {
+    &__wrap-title-btn {
+      margin: 0 0 10px;
+    }
   }
-}
 }
